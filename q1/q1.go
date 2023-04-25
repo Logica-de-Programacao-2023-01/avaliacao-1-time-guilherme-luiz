@@ -1,6 +1,6 @@
 package q1
 
-//Em um dia quente de verão, Pete e seu amigo Billy decidiram comprar uma melancia. Eles escolheram a maior e mais
+//em um dia quente de verão, Pete e seu amigo Billy decidiram comprar uma melancia. Eles escolheram a maior e mais
 //saborosa, na opinião deles, e, em seguida, pesaram a fruta nas balanças, obtendo seu peso em quilos. Morrendo de sede,
 //correram para casa com a melancia e decidiram dividi-la. No entanto, enfrentaram um problema difícil.
 //
@@ -12,8 +12,24 @@ package q1
 //
 //A função deve retornar um valor booleano, indicando se é possível ou não dividir a melancia da forma desejada. Se o peso
 //da melancia for menor ou igual a 0, a função deve retornar um erro.
+import "fmt"
 
 func DivideWatermelon(weight int) (bool, error) {
-	// Seu código aqui
-	return false, nil
+
+	if weight <= 0 {
+
+		return false, fmt.Errorf("peso inválido")
+
+	}
+
+	if weight >= 4 && weight%2 == 0 {
+
+		return true, nil
+
+	} else {
+
+		return false, nil
+
+	}
+
 }
