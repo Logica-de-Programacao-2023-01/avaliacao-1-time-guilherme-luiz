@@ -13,7 +13,8 @@ package q2
 //Ajude os amigos a encontrar o número de problemas para os quais eles escreverão uma solução.
 
 func ProblemsSolved(answers [][3]bool) int {
-        contagemValidos := 0
+
+	contagemValidos := 0
 	contagemBool := make(map[bool]int)
 
 	for i := 0; i < len(answers); i++ {
@@ -32,6 +33,7 @@ func ProblemsSolved(answers [][3]bool) int {
 
 		}
 
-	}	
-	return 0
+	}
+
+	return contagemValidos
 }
